@@ -7,7 +7,7 @@ describe('loader error regression test for #1581', () => {
     it(`should not ignore loader's error produce a failing build`, () => {
         const { stderr, stdout } = run(__dirname, [], false);
         expect(stderr).toBeFalsy();
-        expect(stdout).toContain('[built] [failed] [1 error]');
+        expect(stdout).toContain('[1 error]');
         expect(stdout).toContain(`Cannot assign to 'foobar' because it is a constant`);
     });
 });
